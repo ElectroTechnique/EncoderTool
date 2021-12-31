@@ -30,4 +30,9 @@ namespace EncoderTool
     {
         callback = _callback;
     }
+
+    void EncPlexBase::attachBtnCallback(allBtnCallback_t _btnCallback)
+    {
+        btnCallback = _btnCallback;
+    }
 } // namespace EncoderTool

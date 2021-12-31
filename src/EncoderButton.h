@@ -6,7 +6,7 @@ namespace EncoderTool
 {
     class EncoderButton : public Bounce
     {
-     public:
+    public:
         EncoderButton() : Bounce() {}
 
         bool update(bool state)
@@ -15,7 +15,7 @@ namespace EncoderTool
             return Bounce::update();
         }
 
-     protected:
+    protected:
         bool readCurrentState() override { return curState; }
         bool curState;
     };

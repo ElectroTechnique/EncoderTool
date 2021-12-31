@@ -9,13 +9,13 @@ namespace EncoderTool
     // Simple encoder implementation which reads phase A and B from two digital pins
     class PolledEncoder : public EncoderBase
     {
-     public:
+    public:
         inline void begin(int pinA, int pinB, CountMode = CountMode::quarter, int inputMode = INPUT_PULLUP);
         inline void begin(int pinA, int pinB, int pinBtn, CountMode = CountMode::quarter, int inputMode = INPUT_PULLUP);
 
-        inline void tick(); //call tick() as often as possible. For mechanical encoders a call frequency of > 5kHz should be sufficient
+        inline void tick(); // call tick() as often as possible. For mechanical encoders a call frequency of > 5kHz should be sufficient
 
-     protected:
+    protected:
         int pinA, pinB, pinBtn = UINT32_MAX;
     };
 
